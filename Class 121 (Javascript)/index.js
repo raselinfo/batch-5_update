@@ -53,22 +53,35 @@
 */
 
 
-var a = 11;
+// var a = 11;
 
-function A() {
-    var b = 12;
-    function B() {
-        var c = 23;
-        console.log(c)
-    }
+// function A() {
+//     var b = 12;
+//     function B() {
+//         var c = 23;
+//         console.log(c)
+//     }
 
-    function C() {
-        var d = 56;
-        console.log(d);
-    }
-    console.log(b)
-    // D(b)
-    B()
-    C()
+//     function C() {
+//         var d = 56;
+//         console.log(d);
+//     }
+//     console.log(b)
+//     // D(b)
+//     B()
+//     C()
+// }
+// A()
+
+
+
+abc()
+function abc() {
+    console.log("I am Function")
 }
-A()
+
+newAbc();
+var newAbc = function () {
+    console.log("I am New ABC Function")
+}
+newAbc()        
