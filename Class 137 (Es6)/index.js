@@ -55,26 +55,26 @@
 // }
 
 
-let obj = {
-  start:0,
-  end:5,
-  [Symbol.iterator](){
-    let i=this.start; 
-    return {
-      next:()=>{
-        return{
-          done:i> this.end,
-          value: i > this.end ? undefined : i++
-        }
-      }
-    }
-  }
-}
+// let obj = {
+//   start:0,
+//   end:5,
+//   [Symbol.iterator](){
+//     let i=this.start; 
+//     return {
+//       next:()=>{
+//         return{
+//           done:i> this.end,
+//           value: i > this.end ? undefined : i++
+//         }
+//       }
+//     }
+//   }
+// }
 
 
-for(let v of obj){
-  console.log(v)
-}
+// for(let v of obj){
+//   console.log(v)
+// }
 // let iterator = obj[Symbol.iterator]()
 // console.log(iterator.next())
 // console.log(iterator.next())
@@ -85,3 +85,19 @@ for(let v of obj){
 // console.log(iterator.next())
 // console.log(iterator.next())
 // console.log(iterator.next())
+
+let arr=[
+  {name:"Rasel",marks:20},
+  {name:"Nahid",marks:80},
+  {name:"Sakib",marks:30},
+]
+
+const getResult=(arr)=>{
+ let result= arr.filter(item => {
+    let { name, marks } = item
+    return !(marks>=80)
+  });
+  return result
+}
+
+console.log(getResult(arr))
